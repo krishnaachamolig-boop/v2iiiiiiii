@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    background: radial-gradient(circle at 50% 0%, #0e1620 0%, #05070a 60%);
+  }
+  ::selection {
+    background: rgba(34, 211, 238, 0.35);
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .glass-card {
+    @apply bg-base-900/70 border border-base-700 backdrop-blur-md;
+  }
+}
